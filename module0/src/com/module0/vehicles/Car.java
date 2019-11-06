@@ -1,4 +1,6 @@
-package com.module0;
+package com.module0.vehicles;
+
+import com.module0.vehicles.Vehicle;
 
 public class Car extends Vehicle {
 	private double engineCapasity;

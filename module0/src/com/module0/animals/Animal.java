@@ -1,4 +1,4 @@
-package com.module0;
+package com.module0.animals;
 
 public class Animal {
 

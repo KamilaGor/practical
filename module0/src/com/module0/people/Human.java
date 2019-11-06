@@ -1,4 +1,4 @@
-package com.module0;
+package com.module0.people;
 
 public class Human {
 	private String name;

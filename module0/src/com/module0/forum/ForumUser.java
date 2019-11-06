@@ -1,4 +1,4 @@
-package com.module0;
+package com.module0.forum;
 
 public class ForumUser extends User {
 

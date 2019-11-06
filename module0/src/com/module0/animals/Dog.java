@@ -1,4 +1,6 @@
-package com.module0;
+package com.module0.animals;
+
+import com.module0.animals.Animal;
 
 public class Dog extends Animal {
 	private String name;

@@ -1,5 +1,12 @@
 package com.module0;
 
+import com.module0.animals.Dog;
+import com.module0.forum.ForumUser;
+import com.module0.people.Human;
+import com.module0.people.Person;
+import com.module0.vehicles.Car;
+import com.module0.vehicles.Vehicle;
+
 public class Main {
 
     public static void main(String[] args) {

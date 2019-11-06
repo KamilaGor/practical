@@ -1,4 +1,4 @@
-package com.module0;
+package com.module0.vehicles;
 
 public class Vehicle {
 	private String model;
