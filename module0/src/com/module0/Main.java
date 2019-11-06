@@ -3,7 +3,7 @@ package com.module0;
 public class Main {
 
     public static void main(String[] args) {
-        //part1
+        //part1 boolean if
         System.out.println("Część 1");
         Person janek = new Person("Janek", 23, 1.56, 'm', true);
         boolean result = janek.isGoodProgramer();
@@ -26,7 +26,7 @@ public class Main {
         }
         System.out.println();
 
-        //part3
+        //part3 tablica
         System.out.println("Część 3");
         String names[] = new String[5];
         names[0] = "Janek";
@@ -38,15 +38,15 @@ public class Main {
         System.out.println(result2);
         System.out.println();
 
-        // part4
+        // part4  tworzenie obiektu
         System.out.println("Część 4");
         Human michal = new Human("Michał", "male");
-        String name = ((Human)michal).getName();
+        String name = michal.getName();
         String sex = michal.getSex();
         System.out.println("Użytkownik ma na imię: " + name + " płeć: " + sex);
         System.out.println();
 
-        // part5
+        // part5 dziedziczenie, rzutowanie, polimorfizm
         System.out.println("Część 5");
         Vehicle honda = new Car("honda", "2008", 2.00);
         String model = honda.getModel();
@@ -54,7 +54,7 @@ public class Main {
         System.out.println("Sprzedaję samochód o marce: " + model + " i pojemności silnika: " + capasity);
         System.out.println();
 
-        // part6
+        // part6 dziedziczenie metod
         System.out.println("Część 6 ");
         Dog pikus = new Dog ("Pikuś", 2);
         String dogName = pikus.getName();
@@ -63,7 +63,7 @@ public class Main {
         System.out.println( result6 + " dla psa o imieniu: " + dogName);
         System.out.println();
 
-        // part7
+        // part7 dziedziczenie metoda super()
         System.out.println("Część 7 ");
         ForumUser andrew = new ForumUser("Andrew", "Kowalski", 'm',
                 23, "andrew@kakaka.pl", "Anrdrew23", 12, true);
