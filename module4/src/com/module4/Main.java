@@ -1,6 +1,7 @@
 package com.module4;
 
 import com.module4.cannons.Cannon;
+import com.module4.clocks.Clock;
 import com.module4.colorshashmap.Copier;
 import com.module4.orders.Order;
 
@@ -86,6 +87,22 @@ public class Main {
             System.out.println("Cannon number: " + (i + 1) + " is loaded: " + cannonsList.get(i).isLoaded());
             System.out.println();
         }
+        System.out.println();
+        //part5 - LinkedList
+        System.out.println("Part5 - LinkedList: hours with LocalTime ");
+        Clock clock1 = new Clock(13,13, 13);
+        Clock clock2 = new Clock(14,14, 14);
+        Clock clock3 = new Clock(15,15, 15);
 
+        LinkedList<Clock> hoursList = new LinkedList<>();
+        hoursList.add(clock1);
+        hoursList.add(clock2);
+        hoursList.add(clock3);
+
+        for(int i=0; i < hoursList.size(); i++) {
+            System.out.println("Time before switching: " + hoursList.get(i));
+            hoursList.get(i).setHour(hoursList.get(i).getTime().plusMinutes(1));
+            System.out.println("Time after switching: " + hoursList.get(i));
+        }
     }
 }
