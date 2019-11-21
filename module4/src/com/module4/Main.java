@@ -1,10 +1,10 @@
 package com.module4;
 
+import com.module4.cannons.Cannon;
+import com.module4.colorshashmap.Copier;
 import com.module4.orders.Order;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -45,5 +45,47 @@ public class Main {
         for(Order theOrder: theOrdersSet) {
             System.out.println(theOrder);
         }
+        System.out.println();
+        //part3 - HashSet
+        System.out.println("Part3 - HashMap: copying map values to another map ");
+        Map<Integer, String> myFavouriteMap = new HashMap<Integer, String>();
+        Map<Integer, String> myFriendFavouriteMap = new HashMap<Integer, String>();
+        myFavouriteMap.put(1, "Red");
+        myFavouriteMap.put(2, "Green");
+        myFavouriteMap.put(3, "Black");
+        System.out.println("Values in first map: " + myFavouriteMap);
+        myFriendFavouriteMap.put(4, "White");
+        myFriendFavouriteMap.put(5, "Blue");
+        myFriendFavouriteMap.put(6, "Orange");
+        System.out.println("Values in second map: " + myFriendFavouriteMap);
+        Map<Integer, String> ourFavouriteColors = new HashMap<Integer, String>();
+        Copier copier = new Copier();
+        copier.duplicateMap(myFavouriteMap, ourFavouriteColors);
+        copier.duplicateMap(myFriendFavouriteMap, ourFavouriteColors);
+        System.out.println("Values in common map: " + ourFavouriteColors);
+        System.out.println();
+        //part4 - HashSet
+        System.out.println("Part4 - LinkedList: cannons collections ");
+        Cannon cannon1 = new Cannon(true);
+        Cannon cannon2 = new Cannon(false);
+        Cannon cannon3 = new Cannon(false);
+        Cannon cannon4 = new Cannon(true);
+        LinkedList<Cannon> cannonsList = new LinkedList<>();
+        cannonsList.add(cannon1);
+        cannonsList.add(cannon2);
+        cannonsList.add(cannon3);
+        cannonsList.add(cannon4);
+        for(int i = 0; i<cannonsList.size(); i++) {
+            System.out.println("Cannon number: " + (i+1));
+            cannonsList.get(i).fire();
+            System.out.println("Cannon is loaded: " + cannonsList.get(i).isLoaded());
+            System.out.println();
+        }
+        for(int i = 0; i<cannonsList.size(); i++) {
+            cannonsList.get(i).setLoaded(true);
+            System.out.println("Cannon number: " + (i + 1) + " is loaded: " + cannonsList.get(i).isLoaded());
+            System.out.println();
+        }
+
     }
 }
